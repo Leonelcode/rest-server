@@ -1,6 +1,6 @@
-### Getting started
+# Getting started
 
-First things first, you'll need to fork or clone this repository, and run the install command of your choosing (preferrably Yarn):
+Clone this repository, and run the install command (preferrably Yarn):
 
 ```
 yarn install
@@ -9,7 +9,7 @@ yarn install
 
 npm install
 ```
-And that's really about it (see, I said it was simple!). To fire up the server and have it do stuff, you'll need to start it with the familiar command:
+Start the proyect with Yarn or Npm:
 
 ```
 yarn start
@@ -18,3 +18,56 @@ yarn start
 
 npm start
 ```
+# Available end-points
+
+### GET /reviews
+
+Gets all the reviews.
+
+### POST /reviews
+
+Creates a review (be sure you are sending the headers via your library).
+
+**Headers**
+
+Content-Type : application/json
+
+**Request body (raw)**
+
+```
+{
+    "name": "Roy Vargas",
+    "rating": "2",
+    "date": "10/11/2020",
+    "comment": "Estos Cinammon Rolls son excelentes."
+}
+```
+
+### PUT /reviews/:id
+
+Updates a review. The JSON object must be passed in the request body.
+
+**Headers**
+
+Content-Type : application/json
+
+**Request body (raw)**
+
+```
+{
+    "name": "Roy Vargas",
+    "rating": "2",
+    "date": "10/11/2020",
+    "comment": "Estos Cinammon Rolls son excelentes."
+}
+```
+
+### DELETE /reviews/:id
+
+Removes an review given its id.
+
+# Authors
+* [Leonel Vega](https://github.com/Leonelcode)
+
+* [Roy Vargas](https://github.com/Royvargas55)
+
